@@ -8,4 +8,6 @@ $(document).ready(function() {
       </tr>
       `)
   )};
+
+  $('#song-list').append(song.element);
 });
