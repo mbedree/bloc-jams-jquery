@@ -28,6 +28,10 @@ $(document).ready(function(){
     player.playPause(previousSong);
   });
 
+  $('#time-control input').on('input', function (event){
+    player.skipTo(event.target.value);
+  });
+
   setInterval( () => {
      const currentTime = player.getTime();
      const duration = player.getDuration();
