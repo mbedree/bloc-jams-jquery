@@ -39,4 +39,8 @@ $(document).ready(function(){
      $('#time-control .current-time').text(currentTime);
      $('#time-control input').val(percent);
    }, 1000);
+
+   $('#volume-control input').click(function (event){
+     player.setVolume(event.target.value);
+   });
  });
