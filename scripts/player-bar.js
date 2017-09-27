@@ -36,8 +36,11 @@ $(document).ready(function(){
      const currentTime = player.getTime();
      const duration = player.getDuration();
      const percent = (currentTime / duration) * 100;
-     $('#time-control .current-time').text(currentTime);
-     $('.total-time').text(duration);
+     const formattedTime = player.formatTime(currentTime);
+     $('#time-control .current-time').text(formattedTime);
+
+     const formattedTotalTime = player.formatTime(duration);
+     $('.total-time').text(formattedTotalTime);
      $('#time-control input').val(percent);
    }, 1000);
 
