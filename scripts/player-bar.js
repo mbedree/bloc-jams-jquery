@@ -27,4 +27,8 @@ $(document).ready(function(){
     let previousSong = album.songs[previousSongIndex];
     player.playPause(previousSong);
   });
+
+  setInterval( () => {
+
+  }, 1000);
 });
