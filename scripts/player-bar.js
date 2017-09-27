@@ -29,6 +29,9 @@ $(document).ready(function(){
   });
 
   setInterval( () => {
-
-  }, 1000);
-});
+     const currentTime = player.getTime();
+     const duration = player.getDuration();
+     const percent = (currentTime / duration) * 100;
+     $('#time-control input').val(percent);
+   }, 1000);
+ });
