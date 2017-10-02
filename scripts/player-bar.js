@@ -39,8 +39,12 @@ $(document).ready(function(){
      const formattedTime = player.formatTime(currentTime);
      $('#time-control .current-time').text(formattedTime);
 
-     const formattedTotalTime = player.formatTime(duration);
-     $('.total-time').text(formattedTotalTime);
+    //  const formattedTotalTime = player.formatTime(duration);
+    //  $('.total-time').text(formattedTotalTime);
+    const remainingTime = duration - currentTime;
+    const formattedTotalTime = player.formatTime(remainingTime);
+    $('.total-time').text(formattedTotalTime);
+
      $('#time-control input').val(percent);
    }, 1000);
 
