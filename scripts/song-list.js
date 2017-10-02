@@ -1,5 +1,7 @@
 $( document ).ready(function() {
    album.songs.forEach( (song, index) => {
+     //call player.formatTime for song duration
+     var formattedDuration = player.formatTime(song.duration);
      song.element = $(`
        <tr>
          <td>
@@ -10,7 +12,7 @@ $( document ).ready(function() {
           </button>
          </td>
          <td>${song.title}</td>
-         <td>${song.duration}</td>
+         <td>${formattedDuration}</td>
         </tr>
      `);
 
