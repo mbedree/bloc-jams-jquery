@@ -58,6 +58,10 @@ class Player {
     var divisor_for_seconds = divisor_for_minutes % 60;
     var seconds = Math.ceil(divisor_for_seconds);
 
+    if(seconds < 10){
+      seconds = "0" + seconds;
+    }
+
     var obj = {
         "h": hours,
         "m": minutes,
